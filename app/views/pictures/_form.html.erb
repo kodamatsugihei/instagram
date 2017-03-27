@@ -13,13 +13,13 @@
 
   <%= f.hidden_field :title %>
   <%= f.hidden_field :content %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.label :タイトル %>
+  <%= f.text_field :title, class: 'form-control' %>
   <br>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
+  <%= f.label :内容 %>
+  <%= f.text_field :content, class: 'form-control' %>
   <br>
-  <%= f.submit %>
+  <%= f.submit '写真投稿', class: 'btn btn-primary btn-block' %>
 <% end %>
-
-<%= link_to "写真投稿一覧に戻る", pictures_path %>
+<br>
+<%= link_to "写真投稿一覧に戻る", pictures_path, class: 'btn btn-default btn-block' %>
