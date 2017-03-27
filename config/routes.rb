@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :pictures, only: [:index, :new, :create, :edit, :update, :destroy]
 
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
   root 'top#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
