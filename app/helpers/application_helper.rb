@@ -1,5 +1,14 @@
 module ApplicationHelper
+  def picture_img(picture)
+    return image_tag(picture.image, alt: "画像", :size => '250x170') if picture.image?
 
+    unless picture.image.blank?
+      image = picture.image;
+    else
+      image = 'no_image.png'
+    end
+    image_tag(image, alt: "画像")
+  end
 end
 
 module ActionView

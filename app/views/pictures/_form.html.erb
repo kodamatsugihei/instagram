@@ -9,6 +9,9 @@
   <%= f.label :内容 %>
   <%= f.text_field :content, class: 'form-control' %>
   <br>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+  <br>
   <%= f.submit '写真投稿', class: 'btn btn-primary btn-block' %>
 <% end %>
 <br>
