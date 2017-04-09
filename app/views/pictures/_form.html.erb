@@ -3,11 +3,9 @@
 
   <%= f.hidden_field :title %>
   <%= f.hidden_field :content %>
-  <%= f.label :タイトル %>
-  <%= f.text_field :title, class: 'form-control' %>
+  <%= f.text_field :title, class: 'form-control', placeholder: 'タイトル' %>
   <br>
-  <%= f.label :内容 %>
-  <%= f.text_field :content, class: 'form-control' %>
+  <%= f.text_field :content, class: 'form-control', placeholder: '本文' %>
   <br>
   <%= f.file_field :image %>
   <%= f.hidden_field :image_cache %>
